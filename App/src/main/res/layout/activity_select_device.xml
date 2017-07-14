@@ -1,0 +1,311 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.appscomm.pedometer.activity.SelectDeviceActivity"
+    android:background="@drawable/background_main">
+
+    <!-- topbar 标题显示 -->
+
+    <FrameLayout
+        android:id="@+id/pttopbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/title" />
+
+        <!-- 左边的按钮   android:onClick="btn_left_clicked" -->
+
+        <ImageButton
+            android:id="@+id/btn_left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="0dip"
+            android:background="@drawable/topbtn_rebutn_btn_selector"
+            android:onClick="btn_return_clicked"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/sv_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/pttopbar"
+        android:scrollbarStyle="outsideOverlay"
+
+        >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_l39"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_l39"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_l39"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_l39"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:paddingLeft="10dip"
+                android:text="3PLUS-HR"
+                android:textColor="@android:color/black"
+                android:textSize="18dip"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/goal_bar_img0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/more" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#cccccc"
+            android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_l28h"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_l28h"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_l28h"></ImageView>
+
+        <TextView
+            android:id="@+id/tv_bind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_l28h"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:paddingLeft="10dip"
+            android:text="@string/l28h_item"
+            android:textColor="@android:color/black"
+            android:textSize="18dip"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/goal_bar_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/more" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="#cccccc"
+        android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_l30d"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_l30d"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_l30d"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_l30d"
+                android:layout_marginLeft="10dip"
+                android:paddingLeft="10dip"
+                android:text="@string/l30d_item"
+                android:textColor="@android:color/black"
+                android:textSize="18dip"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/goal_bar_img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/more" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#cccccc"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_w01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_w01"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_w01"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_w01"
+                android:layout_marginLeft="10dip"
+                android:paddingLeft="10dip"
+                android:text="@string/w01_item"
+                android:textColor="@android:color/black"
+                android:textSize="18dip"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/goal_bar_img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/more" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#cccccc" />
+
+        <RelativeLayout
+            android:id="@+id/layout_l28t"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_l28t"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_l28t"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_l28t"
+                android:layout_marginLeft="10dip"
+                android:paddingLeft="10dip"
+                android:text="3PLUS-LITE"
+                android:textColor="@android:color/black"
+                android:textSize="18dip"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/goal_bar_img3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/more" />
+        </RelativeLayout>
+
+        <!--<TextView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="0.5dip"-->
+            <!--android:layout_marginLeft="10dip"-->
+            <!--android:layout_marginRight="10dip"-->
+            <!--android:background="#cccccc" />-->
+        <RelativeLayout
+            android:id="@+id/layout_l38i"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_l38i"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@drawable/layer_38"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv_l38i"
+                android:paddingLeft="10dip"
+                android:text="B5Ameter"
+                android:textColor="@android:color/black"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/goal_bar_img4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/more" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#cccccc" />
+    </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

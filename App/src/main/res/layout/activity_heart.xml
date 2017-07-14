@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="0dip"
+                android:background="@drawable/topbtn_rebutn_btn_selector"
+                android:onClick="btn_return_clicked"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_hert"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/change_page"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/iv_pagePre"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/blood_date"
+            android:src="@drawable/page_pre" />
+
+        <TextView
+            android:id="@+id/blood_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="4-6"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_pageNext"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/blood_date"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@+id/blood_date"
+            android:src="@drawable/page_next" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/blood_circle">
+
+            <!--<Button-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:background="@drawable/blood_circle" />-->
+
+            <TextView
+                android:id="@+id/blood_value_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/blood_value_pressure"
+                android:layout_centerHorizontal="true"
+                android:text="bpm"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--调试数据-->
+            <LinearLayout
+                android:id="@+id/tag_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tag_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="网络请求参数：url"
+                    android:textColor="#FF00" />
+
+                <TextView
+                    android:id="@+id/tag_starttime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="开始日期：2017-06-07 0:00"
+                    android:textColor="#00FF00" />
+
+                <TextView
+                    android:id="@+id/tag_endtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="结束日期：2017-06-07 23:59"
+                    android:textColor="#0000FF" />
+
+                <TextView
+                    android:id="@+id/tag_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请求结果:"
+                    android:textColor="#FF59bb" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/nodata"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/doing"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/blood_shapes"
+                android:text="@string/blood_measure"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

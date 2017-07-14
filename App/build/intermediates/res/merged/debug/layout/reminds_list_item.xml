@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_list_bar"
+        android:descendantFocusability="blocksDescendants"
+        >
+
+        <!-- <ImageView android:id="@+id/newsDefaultIcon" android:layout_width="94dip"
+            android:layout_height="94dip" android:layout_margin="5dip" android:src="@drawable/loading"
+            android:layout_centerVertical="true" android:visibility="gone" /> -->
+        <!-- android:src="@drawable/loading_news_list_item" -->
+        <ImageButton
+            android:id="@+id/imagebutton_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="5dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_del_selector"
+            />
+        <LinearLayout
+            android:id="@+id/linearlayout_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imagebutton_del"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            />
+
+
+        <!-- 右边的图标 -->
+        <LinearLayout
+            android:id="@+id/linearlayout_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:layout_centerInParent="true"
+            >
+            <!--android:background="@drawable/toggle_selector"-->
+            <ToggleButton
+                android:id="@+id/togglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dip"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/sw_btn"
+                android:visibility="gone"
+                />
+            <Button
+                android:id="@+id/btn_del"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@color/red1"
+                android:textColor="@color/white"
+                android:layout_marginRight="0dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/delete"/>
+            <ImageView
+                android:id="@+id/imageview_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dip"
+                android:visibility="gone"
+                android:background="@drawable/more"
+                android:focusable="false"
+                />
+            <!-- android:background="@drawable/right_list_setting" -->
+        </LinearLayout>
+        <!-- android:layout_centerInParent="true"
+        android:gravity="center"
+         -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/linearlayout_left"
+            android:layout_toLeftOf="@id/linearlayout_right"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:gravity="left"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/linearlayout_content">
+            <ImageView
+                android:id="@+id/imageview_pic"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                android:src="@drawable/remind_item_sport"
+                />
+            <!-- 	android:gravity="center"
+                android:layout_centerInParent="true" -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="0dip"
+                android:id="@+id/linearlayout_content2">
+                <TextView
+                    android:id="@+id/textview_remind_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:lines="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="2012/12/15"
+                    />
+                <!--android:textColor="#12B8BA"-->
+                <TextView
+                    android:id="@+id/textview_remind_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dip"
+                    android:maxLines="3"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:text="zhong"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>

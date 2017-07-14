@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/doneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:textColor="@color/darkgray"
+            android:text="@string/ok"/>
+
+        <TextView
+            android:id="@+id/cancelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@color/darkgray"
+            android:text="@string/cancel"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+
+        <cn.appscomm.pedometer.UI.PickerWheelView
+            android:id="@+id/minutesPickerWheelView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <cn.appscomm.pedometer.UI.PickerWheelView
+            android:id="@+id/AM_PMPickerWheelView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</LinearLayout>

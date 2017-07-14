@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/framelayout_top_right"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical">
+
+        <include layout="@layout/title" />
+
+        <!-- 左边的按钮: 返回1 -->
+        <ImageButton
+            android:id="@+id/btn_left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="0dip"
+            android:background="@drawable/topbtn_rebutn_btn_selector"
+            android:clickable="true"
+            android:onClick="btn_return_clicked"
+            android:visibility="visible" />
+
+        <CheckBox
+            android:id="@+id/cb_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/sw_btn"
+            android:button="@null"
+            android:checked="false" />
+    </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/layout_off"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dip"
+            android:text="@string/off"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_off"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/select_device"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#cccccc"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout_weak"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dip"
+            android:text="@string/weak"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_weak"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/select_device"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#cccccc"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_standard"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dip"
+            android:text="@string/standard"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_standard"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/select_device"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#cccccc"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_strong"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dip"
+            android:text="@string/strong"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_strong"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/select_device"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#cccccc"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

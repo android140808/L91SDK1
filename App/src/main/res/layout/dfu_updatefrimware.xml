@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/pttopbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/title" />
+
+        <!-- 左边的按钮   android:onClick="btn_left_clicked" -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="@string/update"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="0dip"
+            android:background="@drawable/topbtn_rebutn_btn_selector"
+            android:onClick="btn_return_clicked"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageview_pedometer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_update_l39" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:id="@+id/ll_update_success"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/img_l30d_done" />
+
+                <!--升级成功-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dfu_success"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_update_faild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/update_flag_faild" />
+
+                <!--升级失败-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dfu_faild"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!--进度条-->
+                <ProgressBar
+                    android:id="@+id/pb_update_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progressDrawable="@drawable/progress_horizontal_holo_dark"
+                    android:visibility="gone" />
+
+                <!--0%-->
+                <TextView
+                    android:id="@+id/tv_update_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/feature_section_padding"
+                    android:freezesText="true"
+                    android:text="@string/dfu_uploading_percentage_label"
+                    android:visibility="gone" />
+
+                <!--升级中,大概需要5~10分钟-->
+                <TextView
+                    android:id="@+id/tv_update_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dfu_update_detail"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <!--升级-->
+            <Button
+                android:id="@+id/bt_update"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/feature_section_padding"
+                android:background="#FF48AE42"
+                android:enabled="true"
+                android:onClick="update"
+                android:text="@string/update"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <!--升级成功-->
+            <Button
+                android:id="@+id/bt_update_success"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/feature_section_padding"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/login_ok"
+                android:enabled="true"
+                android:onClick="onSuccessClicked"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

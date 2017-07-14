@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.l91.appscomm.sdk"
+    android:installLocation="auto"
+    android:versionCode="102"
+    android:versionName="1.0.2" > <!-- android:versionCode="114" -->
+    <!-- android:versionName="1.1.4" -->
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="22" />
+
+    <!-- android:xlargeScreens="true" -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <!-- 往SDCard讀、写入数据权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 蓝牙设备权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- 网络访问 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 短信操作 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <!-- 来电 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name="cn.appscomm.pedometer.application.GlobalApp"
+        android:allowBackup="true"
+        android:configChanges="locale"
+        android:icon="@drawable/l91"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.appscomm.pedometer.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- android:launchMode="singleInstance" -->
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.BaseSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.RemindsActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.AlertActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.RemindNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.UnitsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.RemindsNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.TabSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.ReSetDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.VibrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.RegActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.ForgotPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.ShowWebActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.AdvancedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.CountryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.DetailDataViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.StartSleepActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.ShareMsgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.RemindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.GoalsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.GoalsL38iActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SynDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SynDataActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SleptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SynBaseInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.HelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslationMoveStyle" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.DfuUpdateFirmware"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SetUpDeviceActivity"
+            android:screenOrientation="portrait" />
+        <!-- android:launchMode="singleTask" -->
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SetUpDeviceActivity1"
+            android:screenOrientation="portrait" />
+        <!-- android:launchMode="singleTask" -->
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SetUpDeviceL38iActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.TurnOnBluetoothActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- android:launchMode="singleTask" -->
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.TurnOnZefit"
+            android:screenOrientation="portrait" />
+        <!-- android:launchMode="singleTask" -->
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.DeviceSearchingActivity"
+            android:screenOrientation="portrait" />
+        <!-- android:launchMode="singleTask" -->
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.DeviceSearchingL38iActivity"
+            android:screenOrientation="portrait" />
+        <!-- android:launchMode="singleTask" -->
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SleepGoalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslationMoveStyle" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.AboutAppActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslationMoveStyle" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.UpdateFirmware"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.ShareDialogActivity"
+            android:theme="@style/ShareDialogStyle" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.NotificationL38iActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="cn.appscomm.pedometer.service.BluetoothLeService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.BluetoothLeL38IService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.UploadDataService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.DownloadSportDataService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.DownloadSleepDataService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.MyPushMsgService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.MyPushMsgL38iService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.SynBlueToothDataService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.DFUUpdateService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.SynBlueToothDataL38iService"
+            android:enabled="true" />
+        <service
+            android:name="cn.appscomm.pedometer.service.MyNotification"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <!--
+         	<service
+            android:name="cn.appscomm.pedometer.sms.BootService"
+            android:enabled = "true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="cn.appscomm.pedometer.sms.BootService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        -->
+
+
+        <!--
+        <receiver android:name="cn.appscomm.pedometer.call.CallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <uses-library android:name="android.test.runner" />
+
+        <!-- Plug-in activities -->
+        <!-- android:theme="@style/Theme.AppCompat.Light" -->
+        <activity
+            android:name="no.nordicsemi.android.nrftoolbox.dfu.DfuActivity"
+            android:icon="@drawable/ic_dfu_feature"
+            android:label="@string/dfu_feature_title" />
+        <activity
+            android:name="no.nordicsemi.android.nrftoolbox.dfu.settings.SettingsActivity"
+            android:label="@string/dfu_settings_title" />
+        <activity
+            android:name="no.nordicsemi.android.nrftoolbox.dfu.NotificationActivity"
+            android:label="@string/dfu_feature_title" />
+
+        <service
+            android:name="no.nordicsemi.android.nrftoolbox.dfu.DfuService"
+            android:exported="true"
+            android:label="@string/dfu_service_title" >
+            <intent-filter>
+                <action android:name="no.nordicsemi.android.action.DFU_UPLOAD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="cn.appscomm.pedometer.service.LoginService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.SelectDeviceActivity"
+            android:label="@string/title_activity_select_device"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.FriendsActivity"
+            android:label="@string/title_activity_friends"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.ProfileActivity1"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.FindFriendsActivity"
+            android:label="@string/title_activity_find_friends"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.UpdateFirmwareActivity"
+            android:label="@string/title_activity_update"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.DialogActivity"
+            android:label="@string/title_activity_dialog"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.AdvancedNewActivity"
+            android:label="@string/title_activity_advanced_new" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.HeartRateActivity"
+            android:label="@string/title_activity_heart_rate" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.DvancedSettingsActivity"
+            android:label="@string/title_activity_dvanced_settings" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.PresetSleepActivity"
+            android:label="@string/title_activity_preset_sleep" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.TimeFormatAcitivity"
+            android:label="@string/title_activity_time_format_acitivity" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.ResetActivity"
+            android:label="@string/title_activity_reset" />
+        <activity
+            android:name="cn.appscomm.pedometer.activity.HeartDataViewActivity"
+            android:label="@string/title_activity_heart_data_view" />
+        <!-- <activity android:name="cn.appscomm.pedometer.activity.BloodActivity" /> -->
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <activity android:name="cn.appscomm.pedometer.activity.BloodActivity1" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="cn.appscomm.pedometer.activity.HeartActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.bugtags.library.BugtagsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <service android:name="com.bugtags.library.BugtagsService" />
+
+        <receiver android:name="com.bugtags.library.BugtagsReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

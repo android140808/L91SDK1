@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/otherlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_main"
+    android:orientation="vertical" >
+
+    <!-- topbar 标题显示 -->
+
+    <FrameLayout
+        android:id="@+id/pttopbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/title" />
+
+        <!-- 左边的按钮   android:onClick="btn_left_clicked"   -->
+
+        <ImageButton
+            android:id="@+id/btn_left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="0dip"
+            android:background="@drawable/topbtn_rebutn_btn_selector"
+            android:onClick="btn_return_clicked"
+            android:visibility="visible" />
+        
+    </FrameLayout>
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+	    <LinearLayout
+			android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"
+            android:gravity="center_horizontal"
+	        android:id="@+id/linelayout_no_remind_notes"
+	        >
+    
+	        <!--<TextView
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_marginTop="20dip"
+	        	android:layout_marginLeft="10dip"
+	            android:text="@string/about_app_content"
+	            android:textColor="#000"
+	            android:textSize="14sp" 
+	            /> -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/img_about"
+                android:scaleType="fitStart"/>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_logo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="http://www.yimi999.com"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:autoLink="web"/>
+	    </LinearLayout>
+	</ScrollView>
+</LinearLayout>

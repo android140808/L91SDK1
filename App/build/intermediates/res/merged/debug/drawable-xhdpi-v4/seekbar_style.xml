@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--<layer-list
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@android:id/background"
+            android:drawable="@color/gray"/>
+        <item
+            android:id="@android:id/progress"
+            android:drawable="@color/red"/>
+        <item
+            android:id="@android:id/secondaryProgress"
+            android:drawable="@color/red"/>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <corners  android:radius="20dp" />
+        <solid android:color="@color/gray"/>
+
+    </shape>
+    </layer-list>-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- SEEKBAR背景底部的颜色 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="20dip" />
+            <gradient
+                android:startColor="@color/gray"
+                android:centerColor="@color/gray"
+                android:endColor="@color/gray"
+                android:centerY="0.45"
+                android:angle="270"/>
+        </shape>
+    </item>
+    <!-- 拖动后的颜色 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="20dip" />
+                <gradient
+                    android:startColor="@color/red2"
+                    android:centerColor="@color/red2"
+                    android:endColor="@color/red2"
+                    android:centerY="0.45"
+                    android:angle="270"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

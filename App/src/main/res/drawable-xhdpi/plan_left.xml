@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/img_plan_blue_left" android:state_checked="true"></item>
+    <item android:drawable="@drawable/img_plan_gray_left" android:state_checked="false"></item>
+
+    <!--<item android:state_focused="true" android:state_pressed="true"
+        android:drawable="@drawable/img_plan_blue_left" />
+    <item android:state_focused="false" android:state_pressed="true"
+        android:drawable="@drawable/img_plan_gray_left" />
+
+    <item android:state_focused="true" android:state_enabled="false"
+        android:state_pressed="true"
+        android:drawable="@drawable/img_plan_blue_left" />
+    <item android:state_focused="true" android:state_enabled="false"
+        android:drawable="@drawable/img_plan_gray_left" />-->
+
+    <!--<item android:drawable="@drawable/img_plan_blue_left" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/img_plan_blue_left" android:state_selected="true"></item>
+    <item android:drawable="@drawable/img_plan_gray_left" android:state_selected="false"></item>
+    <item android:drawable="@drawable/img_plan_gray_left" ></item>-->
+</selector>
