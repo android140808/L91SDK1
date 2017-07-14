@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\L91SDK\\wheel\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\wheel_val.xml",
+        "source": "E:\\L91SDK\\wheel\\build\\intermediates\\bundles\\debug\\res\\drawable\\wheel_val.xml"
+    },
+    {
+        "merged": "E:\\L91SDK\\wheel\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\wheel_bg.xml",
+        "source": "E:\\L91SDK\\wheel\\build\\intermediates\\bundles\\debug\\res\\drawable\\wheel_bg.xml"
+    }
+]
